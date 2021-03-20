@@ -1,7 +1,8 @@
 import { CreateCategoryDTO } from '../dtos/create-category-dto';
+import { CategoriesRepositoryInterface } from '../interfaces/categories-repository.interface';
 import { Category } from '../model/category';
 
-export class CategoriesRepository {
+export class CategoriesRepository implements CategoriesRepositoryInterface {
   private categories: Category[];
 
   constructor() {

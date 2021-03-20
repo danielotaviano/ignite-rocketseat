@@ -1,3 +1,4 @@
+import { CategoriesRepositoryInterface } from '../interfaces/categories-repository.interface';
 import { CategoriesRepository } from '../repositories/categories-repository';
 
 interface Request {
@@ -6,7 +7,9 @@ interface Request {
 }
 
 export class CreateCategoryService {
-  constructor(private readonly categoriesRepository: CategoriesRepository) {}
+  constructor(
+    private readonly categoriesRepository: CategoriesRepositoryInterface
+  ) {}
 
   handle({ name, description }: Request): void {
     const existsCategory = this.categoriesRepository.findByName(name);
