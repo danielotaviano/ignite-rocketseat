@@ -1,5 +1,4 @@
 import { CategoriesRepositoryInterface } from '../interfaces/categories-repository.interface';
-import { CategoriesRepository } from '../repositories/categories-repository';
 
 interface Request {
   name: string;
