@@ -11,13 +11,9 @@ export class SpecificationsRepository
   }
 
   findByName(name: string): Specification {
-<<<<<<< HEAD
     return this.specifications.find(
       (specification) => specification.name === name
     );
-=======
-    return this.specifications.find((specification) => specification.name);
->>>>>>> ca4d9bf599729b94e1f8ff34f84f60308a9389df
   }
 
   create({ description, name }: CreateSpecificationDTO) {
