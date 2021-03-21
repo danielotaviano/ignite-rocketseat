@@ -5,9 +5,16 @@ import { Specification } from '../model/specification';
 export class SpecificationsRepository
   implements SpecificationsRepositoryInterface {
   private specifications: Specification[];
+  private static INSTANCE: SpecificationsRepository;
 
-  constructor() {
+  private constructor() {
     this.specifications = [];
+  }
+
+  public static getInstance(): SpecificationsRepository {
+    if (!this.INSTANCE) this.INSTANCE = new SpecificationsRepository();
+
+    return this.INSTANCE;
   }
 
   findByName(name: string): Specification {

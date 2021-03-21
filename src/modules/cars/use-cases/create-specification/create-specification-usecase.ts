@@ -1,10 +1,10 @@
-import { SpecificationsRepositoryInterface } from '../interfaces/specification-repository.interface';
+import { SpecificationsRepositoryInterface } from '../../interfaces/specification-repository.interface';
 
 export interface Request {
   name: string;
   description: string;
 }
-export class CreateSpecificationService {
+export class CreateSpecificationUseCase {
   constructor(
     private readonly specificationsRepository: SpecificationsRepositoryInterface
   ) {}
