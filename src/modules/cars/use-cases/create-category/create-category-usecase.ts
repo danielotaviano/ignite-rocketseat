@@ -5,7 +5,7 @@ interface Request {
   description: string;
 }
 
-export class CreateCategoryService {
+export class CreateCategoryUseCase {
   constructor(
     private readonly categoriesRepository: CategoriesRepositoryInterface
   ) {}
